@@ -180,7 +180,16 @@ public class StartPanel extends JPanel
    */
   private void setupPanel()
   {
+	 setLayout(panelLayout); 
 	 
+	 this.add(addCelebrityButton);
+	 this.add(answerField);
+	 this.add(celebrityCountLabel);
+	 this.add(celebrityRadio);
+	 this.add(clueField);
+	 this.add(clueLabel);
+	 this.add(literatureRadio);
+	 this.add(startButton);
   }
   
   /**

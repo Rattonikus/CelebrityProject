@@ -36,9 +36,10 @@ public class CelebrityGame
 	public CelebrityGame()
 	{
 		gameCelebrity = new Celebrity("mark", "fn");
-		gameWindow = new CelebrityFrame(this);
+		gameWindow = new CelebrityFrame(null);
 		celebGameList = new ArrayList<Celebrity>();
 		prepareGame();
+		play();
 	}
 
 	/**
@@ -46,9 +47,8 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
-		gameWindow = new CelebrityFrame(this);
 		celebGameList = new ArrayList<Celebrity>();
-
+		//gameWindow = new CelebrityFrame(this);
 
 	}
 
@@ -72,7 +72,15 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-		
+		if(celebGameList.isEmpty())
+		{
+			System.out.println("List empty");
+
+		}
+		else
+		{
+			gameWindow.replaceScreen("Play");
+		}
 	}
 
 	/**

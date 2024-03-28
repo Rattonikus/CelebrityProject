@@ -18,7 +18,5 @@ public class CelebrityRunner
 	{
 		
 		CelebrityGame cont = new CelebrityGame();
-		CelebrityFrame panel = new CelebrityFrame(cont);
-
 	}
 }
