@@ -72,7 +72,7 @@ public class CelebrityFrame extends JFrame
 	 */
 	public void replaceScreen(String screen)
 	{
-		if (screen.equals("play"))
+		if (screen.equals("Play"))
 		{
 			this.setContentPane(gamePanel);
 		}

@@ -35,8 +35,8 @@ public class CelebrityGame
 	 */
 	public CelebrityGame()
 	{
-		gameCelebrity = new Celebrity("mark", "fn");
-		gameWindow = new CelebrityFrame(null);
+		gameCelebrity = new Celebrity("mark", "fasdASdsdfn");
+	//	gameWindow = new CelebrityFrame(this);
 		celebGameList = new ArrayList<Celebrity>();
 		prepareGame();
 		play();
@@ -47,8 +47,9 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
-		celebGameList = new ArrayList<Celebrity>();
-		//gameWindow = new CelebrityFrame(this);
+		celebGameList.add(gameCelebrity);
+		//System.out.println(celebGameList.get(0).getAnswer());
+		gameWindow = new CelebrityFrame(this);
 
 	}
 
@@ -75,6 +76,8 @@ public class CelebrityGame
 		if(celebGameList.isEmpty())
 		{
 			System.out.println("List empty");
+			gameWindow.replaceScreen("Play");
+
 
 		}
 		else
@@ -154,7 +157,7 @@ public class CelebrityGame
 	public String sendClue()
 	{
 		
-		return null;
+		return celebGameList.get(0).getClue();
 	}
 
 	/**
@@ -165,6 +168,7 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
-		return null;
+		System.out.println(celebGameList.get(0).getAnswer());
+		return celebGameList.get(0).getAnswer();
 	}
 }
