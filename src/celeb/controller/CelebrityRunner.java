@@ -15,8 +15,7 @@ public class CelebrityRunner
 	 * @param args Unused parameter as it is a GUI based program.
 	 */
 	public static void main(String [] args)
-	{
-		
+	{	
 		CelebrityGame cont = new CelebrityGame();
 	}
 }

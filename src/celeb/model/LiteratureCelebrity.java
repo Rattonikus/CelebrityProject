@@ -21,7 +21,7 @@ public class LiteratureCelebrity extends Celebrity
 		
 		for (String clue : clues)
 		{
-			clueList.add(clues);
+			clueList.add(clue);
 		}
 	}
 	

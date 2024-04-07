@@ -46,6 +46,7 @@ public class CelebrityFrame extends JFrame
 		//The first line of any subclass should ALWAYS be a correct call to the super constructor.
 		super();
 		this.gamePanel = new CelebrityPanel(controllerRef);
+		this.panelCards = new JPanel(new CardLayout());
 		this.startPanel = new StartPanel(controllerRef);
 		this.controller = controllerRef;
 		
@@ -58,12 +59,21 @@ public class CelebrityFrame extends JFrame
 	 */
 	private void setupFrame()
 	{
-		this.setContentPane(startPanel);
-		this.setSize(800, 600);
-		this.setTitle("Celeb");
-		this.setResizable(false);
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setVisible(true);
+		
+		 CardLayout cardLayout = new CardLayout();
+		 panelCards.setLayout(cardLayout);
+		    
+		 panelCards.add(gamePanel, "GAME");
+		 panelCards.add(startPanel, "START");
+
+		 this.setContentPane(panelCards);
+		    
+		 this.setSize(800, 600);
+		 this.setTitle("Celeb");
+		 this.setResizable(false);
+		 this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+		 this.setVisible(true);
 	}
 	
 	/**
@@ -72,13 +82,17 @@ public class CelebrityFrame extends JFrame
 	 */
 	public void replaceScreen(String screen)
 	{
-		if (screen.equals("Play"))
+	    CardLayout cardLayout = (CardLayout) panelCards.getLayout();
+	    
+	    
+		if (screen.equals("GAME"))
 		{
-			this.setContentPane(gamePanel);
+			gamePanel.addClue(controller.sendClue());
+	        cardLayout.show(panelCards, "GAME"); // Show the "GAME" panel
 		}
-		else
+		else if (screen.equals("START"))
 		{
-			this.setContentPane(startPanel);
+	        cardLayout.show(panelCards, "START"); // Show the "START" panel
 		}
 	}
 	

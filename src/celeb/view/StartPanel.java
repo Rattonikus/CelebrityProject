@@ -291,7 +291,7 @@ public class StartPanel extends JPanel
     }
     String answer = answerField.getText().trim();
     String clue = clueField.getText().trim();
-    answerField.setText("");
+    answerField.setText("");	
     clueField.setText("");
     controller.addCelebrity(answer, clue, type);
     startButton.setEnabled(true);
