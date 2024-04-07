@@ -68,7 +68,13 @@ public class Celebrity
 	@Override
 	public String toString()
 	{
-		return null;
+		String description = "This is a celebrity";
+		description += "\n" + "With an answer of " + getAnswer();
+		description += " specified by clue + ";
+		description += clue;
+	
+		
+		return description; 
 	}
 	
 }

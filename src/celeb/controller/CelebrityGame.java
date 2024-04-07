@@ -150,7 +150,9 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-		if (clue == null || type == null || clue.length() < 10)
+		if (clue == null || type == null || clue.length() < 10 ||
+				type.equals("Literature") && clue.indexOf(",") == -1 ||
+				type.equals("Literature") && clue.indexOf(",") < 4)
 		{
 			return false;
 		}

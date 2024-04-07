@@ -8,6 +8,8 @@ public class LiteratureCelebrity extends Celebrity
 	
 	private ArrayList<String> clueList;
 	
+
+	
 	public LiteratureCelebrity(String name, String clue)
 	{
 		super(name, clue);
@@ -46,9 +48,12 @@ public class LiteratureCelebrity extends Celebrity
 		description += " specified by clues: ";
 		for (String clue : super.getClue().split(","));
 		{
-			description += "\n\t" + clue; 
+			description += "\n" + super.getClue(); 
+
+
 		}
-		
+		System.out.println(description);
+
 		return description; 
 	}
 
