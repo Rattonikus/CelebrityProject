@@ -101,8 +101,6 @@ public class CelebrityGame
 		}
 		else
 		{
-			this.gameCelebrity = celebGameList.get(0);
-			System.out.println(celebGameList.size() + "Play");
 			gameWindow.replaceScreen("START");
 			System.out.println("List empty");
 		}
