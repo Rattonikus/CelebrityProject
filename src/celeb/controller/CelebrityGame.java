@@ -106,12 +106,7 @@ public class CelebrityGame
 		}
 	}
 	
-	public void play(String reset)
-	{
-		celebGameList.clear();
-		gameWindow.replaceScreen("START");
-	}
-
+	 
 	/**
 	 * Adds a Celebrity of specified type to the game list
 	 * 
@@ -134,13 +129,15 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
-		if (name.length() >= 4)
+		System.out.println(celebGameList.size() + " VALIDATE");
+
+		if (name == null || name.length() < 4)
 		{
-			return true;
+			return false;
 		}
 		else
 		{
-			return false;
+			return true;
 		}
 	}
 
@@ -153,13 +150,13 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-		if (clue.length() > 10)
+		if (clue == null || type == null || clue.length() < 10)
 		{
-			return true; 
+			return false;
 		}
 		else
 		{
-			return false;
+			return true;
 		}
 	}
 

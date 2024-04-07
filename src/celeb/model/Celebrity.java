@@ -10,11 +10,11 @@ public class Celebrity
 	/**
 	 * The clue to determine the celebrity
 	 */
-	String answer; 
+	private String answer; 
 	/**
 	 * The answer or name of the celebrity.
 	 */
-	String clue; 
+	private String clue; 
 	/**
 	 * Creates a Celebrity instance with the supplied answer and clue
 	 * @param answer
@@ -50,7 +50,7 @@ public class Celebrity
 	 */
 	public void setClue(String clue)
 	{
-		
+		this.clue = clue;
 	}
 
 	/**
@@ -59,7 +59,7 @@ public class Celebrity
 	 */
 	public void setAnswer(String answer)
 	{
-		
+		this.answer = answer;
 	}
 	
 	/**

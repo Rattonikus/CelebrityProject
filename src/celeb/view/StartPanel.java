@@ -297,4 +297,9 @@ public class StartPanel extends JPanel
     startButton.setEnabled(true);
   }
   
+  public void resetGameCount()
+  {
+      celebrityCountLabel.setText(countLabelText + celebrityCount);
+  }
+  
 }
