@@ -40,8 +40,6 @@ public class CelebrityGame
 		gameWindow = new CelebrityFrame(this);
 		celebGameList = new ArrayList<Celebrity>();
 		prepareGame();
-		System.out.println(celebGameList.size());
-		//play();
 	}
 
 	/**
@@ -66,22 +64,17 @@ public class CelebrityGame
 
 		if (guess.trim().toLowerCase().equals(gameCelebrity.getAnswer().toLowerCase()))
 		{
-			System.out.println(guess.trim().toLowerCase() + " ");
-/*
 			if (celebGameList.size() > 1)
 			{
 				celebGameList.remove(0);
 				
 	            gameCelebrity = celebGameList.get(0);
-	            
-	            System.out.println(gameCelebrity.getClue());
-			}	
-			*/
+	        }	
+			
 			return true;
 		}
 		else
 		{
-			System.out.println(celebGameList.size());
 			return false; 
 		}
 	}
@@ -96,13 +89,11 @@ public class CelebrityGame
 		if(celebGameList != null && celebGameList.size() > 0)
 		{
 			this.gameCelebrity = celebGameList.get(0);
-			System.out.println(celebGameList.size() + "SIZE");
 			gameWindow.replaceScreen("GAME");
 		}
 		else
 		{
 			gameWindow.replaceScreen("START");
-			System.out.println("List empty");
 		}
 	}
 	
@@ -129,8 +120,6 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
-		System.out.println(celebGameList.size() + " VALIDATE");
-
 		if (name == null || name.length() < 4)
 		{
 			return false;

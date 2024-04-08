@@ -49,10 +49,7 @@ public class LiteratureCelebrity extends Celebrity
 		for (String clue : super.getClue().split(","));
 		{
 			description += "\n" + super.getClue(); 
-
-
 		}
-		System.out.println(description);
 
 		return description; 
 	}
